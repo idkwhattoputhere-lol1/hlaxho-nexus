@@ -1,172 +1,216 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hlaxho Nexus - Stealth Executor</title>
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&display=swap" rel="stylesheet" />
+  <title>Hlaxho Nexus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
-    html, body {
+    * {
       margin: 0;
       padding: 0;
-      background: linear-gradient(to right, #1a1a2e, #16213e);
-      font-family: 'Chakra Petch', sans-serif;
-      color: #e0e0e0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #3f0a71, #0d1b47);
       overflow-x: hidden;
+      color: #fff;
     }
-    ::selection {
-      background: #f72585;
-      color: white;
-    }
-    header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: radial-gradient(circle, #0f0c29, #302b63, #24243e);
-      text-align: center;
-      position: relative;
-    }
-    header h1 {
-      font-size: 4rem;
-      color: #f72585;
-      text-shadow: 0 0 15px #f72585;
-      margin: 0;
-    }
-    header p {
-      font-size: 1.3rem;
-      margin-top: 1rem;
-      color: #ccc;
-    }
-    .btn-download {
-      margin-top: 2rem;
-      background: transparent;
-      border: 2px solid #f72585;
-      color: #f72585;
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    .btn-download:hover {
-      background: #f72585;
-      color: white;
-    }
-    section {
-      padding: 80px 10% 60px;
-    }
-    h2 {
-      font-size: 2.5rem;
-      color: #f72585;
-      border-bottom: 2px solid #f72585;
-      display: inline-block;
-      margin-bottom: 1rem;
-    }
-    ul {
-      list-style: square;
-      padding-left: 1.5rem;
-    }
-    li {
-      margin-bottom: 12px;
-      font-size: 1.1rem;
-    }
-    blockquote {
-      background: #1a1a2e;
-      border-left: 5px solid #f72585;
-      padding: 1rem;
-      border-radius: 10px;
-      margin: 1rem 0;
-    }
-    footer {
-      background: #0f0c29;
-      padding: 20px;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #888;
-    }
-    .audio-control {
+
+    .particles {
       position: fixed;
-      bottom: 20px;
-      left: 20px;
-      z-index: 999;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 0;
     }
-    .audio-control input {
-      width: 100px;
+
+    .hero {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 100px 20px;
     }
-    .glow {
-      animation: glow 2s ease-in-out infinite alternate;
+
+    .hero h1 {
+      font-size: 4rem;
+      color: #a29bfe;
+      margin-bottom: 20px;
     }
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #f72585, 0 0 20px #7209b7; }
-      to { text-shadow: 0 0 20px #f72585, 0 0 40px #7209b7; }
+
+    .hero p {
+      font-size: 1.5rem;
+      color: #dfe6e9;
+    }
+
+    .button {
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: #6c5ce7;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background: #a29bfe;
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.03);
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    footer {
+      padding: 30px;
+      text-align: center;
+      background: #2d0637;
+    }
+
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 5;
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1 class="glow">Hlaxho Nexus</h1>
-    <p>Ultrastealth Executor for Roblox</p>
-    <button class="btn-download" onclick="window.location.href='https://files.catbox.moe/w5x69a.zip'">Download Now</button>
-  </header>
-
-  <section>
-    <h2>Key Features</h2>
-    <ul>
-      <li>🧬 99% UNC Injections - 95% SUNC Stability</li>
-      <li>🌀 Dual API support: Velocity & Xeno toggle</li>
-      <li>🖥️ Fully custom Godot UI with infinite tabs</li>
-      <li>🎯 Zero-key, instant injection</li>
-      <li>🎨 Unique design & visual identity</li>
-      <li>🔊 Click effects and ambient sound system</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Changelog</h2>
-    <ul>
-      <li>[2025-07-20] Initial public release</li>
-      <li>[2025-07-18] Completed stealth layer and API switcher</li>
-      <li>[2025-07-15] UI upgrade and injection optimizations</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>User Feedback</h2>
-    <blockquote>“Completely different from anything I’ve tried. It’s like the executor *thinks*.” – DevTester01</blockquote>
-    <blockquote>“Velocity + Xeno switch is a game changer. No other UI comes close.” – ShadowScriptKid</blockquote>
-  </section>
-
-  <section>
-    <h2>FAQ</h2>
-    <ul>
-      <li><strong>Is it safe?</strong> Yes, built for maximum stealth.</li>
-      <li><strong>Is it free?</strong> Absolutely. No keys, no ads.</li>
-      <li><strong>Does it auto-update?</strong> Auto update via Bootstrapper (optional).</li>
-    </ul>
-  </section>
-
-  <footer>
-    © 2025 Hlaxho Nexus. Crafted with precision for true stealth.
-  </footer>
-
-  <div class="audio-control">
-    <audio id="bgm" autoplay loop>
-      <source src="https://files.catbox.moe/pk2ob3.mp3" type="audio/mpeg" />
-    </audio>
-    <input type="range" min="0" max="1" step="0.01" value="0.3" onchange="document.getElementById('bgm').volume = this.value">
+  <canvas class="particles"></canvas>
+  <div class="lang-switch">
+    <select id="lang" onchange="switchLang()">
+      <option value="es">Español</option>
+      <option value="en">English</option>
+    </select>
   </div>
 
+  <div class="hero">
+    <h1 id="title">Hlaxho Nexus</h1>
+    <p id="desc">El exploit más avanzado, rápido y sigiloso para Roblox</p>
+    <a href="https://files.catbox.moe/w5x69a.zip"><button class="button" id="download">Descargar</button></a>
+  </div>
+
+  <div class="section">
+    <h2 id="features">Características</h2>
+    <p id="featuresText">Inyección estable, sistema de tabs dinámico, compatibilidad con Velocity y Xeno, y bypass anticheat incorporado.</p>
+  </div>
+
+  <div class="section">
+    <h2 id="team">Nuestro equipo</h2>
+    <p>Maniation - Creador de Hlaxho Nexus<br>Somebodychilling - Diseñador web y de UI</p>
+    <p>Contactos:<br>@idknamelol<br>@maniationwario</p>
+  </div>
+
+  <footer>
+    <p id="footer">© 2025 Hlaxho Nexus. Todos los derechos reservados.</p>
+  </footer>
+
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const audio = document.getElementById('bgm');
-      audio.volume = 0.3;
-    });
-    const clickSound = new Audio("https://cdn.pixabay.com/audio/2022/03/15/audio_d0ff3c1e12.mp3");
-    document.querySelectorAll('button').forEach(btn => {
-      btn.addEventListener('click', () => clickSound.play());
-    });
+    const langData = {
+      es: {
+        title: "Hlaxho Nexus",
+        desc: "El exploit más avanzado, rápido y sigiloso para Roblox",
+        download: "Descargar",
+        features: "Características",
+        featuresText: "Inyección estable, sistema de tabs dinámico, compatibilidad con Velocity y Xeno, y bypass anticheat incorporado.",
+        team: "Nuestro equipo",
+        footer: "© 2025 Hlaxho Nexus. Todos los derechos reservados."
+      },
+      en: {
+        title: "Hlaxho Nexus",
+        desc: "The most advanced, fastest and stealthiest Roblox exploit",
+        download: "Download",
+        features: "Features",
+        featuresText: "Stable injection, dynamic tab system, Velocity and Xeno compatibility, and built-in anticheat bypass.",
+        team: "Our Team",
+        footer: "© 2025 Hlaxho Nexus. All rights reserved."
+      }
+    };
+
+    function switchLang() {
+      const lang = document.getElementById('lang').value;
+      document.getElementById('title').innerText = langData[lang].title;
+      document.getElementById('desc').innerText = langData[lang].desc;
+      document.getElementById('download').innerText = langData[lang].download;
+      document.getElementById('features').innerText = langData[lang].features;
+      document.getElementById('featuresText').innerText = langData[lang].featuresText;
+      document.getElementById('team').innerText = langData[lang].team;
+      document.getElementById('footer').innerText = langData[lang].footer;
+    }
+
+    // Partículas blancas
+    const canvas = document.querySelector('.particles');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const particlesArray = [];
+    const numberOfParticles = 100;
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.speedX = Math.random() * 1 - 0.5;
+        this.speedY = Math.random() * 1 - 0.5;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+      }
+      draw() {
+        ctx.fillStyle = '#ffffff';
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function initParticles() {
+      for (let i = 0; i < numberOfParticles; i++) {
+        particlesArray.push(new Particle());
+      }
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particlesArray.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animateParticles);
+    }
+
+    initParticles();
+    animateParticles();
+  </script>
+</body>
+
+</html>
+
   </script>
 </body>
 </html>
