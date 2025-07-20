@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hlaxho Nexus - Stealthy Roblox Executor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #0a0a0a;
+      font-family: 'Orbitron', sans-serif;
+      overflow-x: hidden;
+      color: #f0f0f0;
+    }
+    ::selection {
+      background: #00ffff60;
+    }
+    header {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1556817411-31ae72fa3ea0') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      color: #00f2ff;
+      z-index: 2;
+      text-shadow: 0 0 10px #00f2ff;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+      z-index: 2;
+    }
+    .btn-download {
+      margin-top: 2rem;
+      z-index: 2;
+      background: #00f2ff;
+      color: black;
+      padding: 1rem 2rem;
+      border: none;
+      font-size: 1.1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #00f2ff;
+      transition: all 0.3s ease;
+    }
+    .btn-download:hover {
+      background: #00b7d3;
+      box-shadow: 0 0 20px #00eaff;
+    }
+    section {
+      padding: 80px 10% 60px;
+    }
+    .features, .changelog, .testimonials, .faq {
+      margin-top: 4rem;
+    }
+    h2 {
+      font-size: 2rem;
+      color: #00f2ff;
+      text-shadow: 0 0 5px #00f2ff;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+    .testimonials blockquote {
+      background: #111;
+      border-left: 5px solid #00f2ff;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 10px;
+    }
+    footer {
+      background: #000;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .fade-in {
+      animation: fadein 2s ease forwards;
+    }
+    @keyframes fadein {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .audio-control {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+    .audio-control input {
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="fade-in">Hlaxho Nexus</h1>
+    <p class="fade-in">The most stealthy & powerful Roblox executor</p>
+    <button class="btn-download fade-in" onclick="window.location.href='https://files.catbox.moe/w5x69a.zip'">Descargar</button>
+  </header>
+
+  <section class="features">
+    <h2>⚙️ Características</h2>
+    <ul>
+      <li>🛡️ Inyección 99% UNC - 95% SUNC</li>
+      <li>🚀 API dual: Velocity y Xeno</li>
+      <li>🧪 UI con sistema de tabs infinitas</li>
+      <li>🎯 Totalmente indetectable y silencioso</li>
+      <li>🌌 Tema visual futurista animado</li>
+      <li>🔊 Sonidos al hacer clic</li>
+      <li>🎵 Música de fondo con control</li>
+    </ul>
+  </section>
+
+  <section class="changelog">
+    <h2>📜 Changelog</h2>
+    <ul>
+      <li>[07/20/2025] Versión inicial pública publicada</li>
+      <li>[07/19/2025] Se agregó soporte para Xeno</li>
+      <li>[07/18/2025] Animaciones mejoradas + UI estable</li>
+    </ul>
+  </section>
+
+  <section class="testimonials">
+    <h2>💬 Testimonios</h2>
+    <blockquote>“Hlaxho Nexus me da inyecciones limpias sin detección. ¡Una bestia!” – Usuario A</blockquote>
+    <blockquote>“Mucho mejor que ejecutores pagados. Sigan así.” – Usuario B</blockquote>
+  </section>
+
+  <section class="faq">
+    <h2>❓ Preguntas Frecuentes</h2>
+    <ul>
+      <li><strong>¿Es seguro?</strong> Sí, está diseñado para ser indetectable y sigiloso.</li>
+      <li><strong>¿Necesito key?</strong> No, es completamente keyless.</li>
+      <li><strong>¿Cuánto pesa?</strong> Menos de 20MB.</li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 Hlaxho Nexus. Todos los derechos reservados.
+  </footer>
+
+  <div class="audio-control">
+    <audio id="bgm" autoplay loop>
+      <source src="https://files.catbox.moe/pk2ob3.mp3" type="audio/mpeg" />
+    </audio>
+    <input type="range" min="0" max="1" step="0.01" value="0.4" onchange="document.getElementById('bgm').volume = this.value">
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('bgm');
+      audio.volume = 0.4;
+    });
+
+    // Click sound effect
+    const clickSound = new Audio("https://cdn.pixabay.com/audio/2022/03/15/audio_d0ff3c1e12.mp3");
+    document.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', () => clickSound.play());
+    });
+  </script>
+</body>
+</html>
