@@ -3,179 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hlaxho Nexus - Stealthy Roblox Executor</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <title>Hlaxho Nexus - Stealth Executor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&display=swap" rel="stylesheet" />
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      background: #0a0a0a;
-      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to right, #1a1a2e, #16213e);
+      font-family: 'Chakra Petch', sans-serif;
+      color: #e0e0e0;
       overflow-x: hidden;
-      color: #f0f0f0;
     }
     ::selection {
-      background: #00ffff60;
+      background: #f72585;
+      color: white;
     }
     header {
       height: 100vh;
-      background: url('https://images.unsplash.com/photo-1556817411-31ae72fa3ea0') center/cover no-repeat;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      background: radial-gradient(circle, #0f0c29, #302b63, #24243e);
       text-align: center;
       position: relative;
-      overflow: hidden;
-    }
-    header::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.6);
-      z-index: 1;
     }
     header h1 {
-      font-size: 3.5rem;
-      color: #00f2ff;
-      z-index: 2;
-      text-shadow: 0 0 10px #00f2ff;
+      font-size: 4rem;
+      color: #f72585;
+      text-shadow: 0 0 15px #f72585;
+      margin: 0;
     }
     header p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
+      margin-top: 1rem;
       color: #ccc;
-      z-index: 2;
     }
     .btn-download {
       margin-top: 2rem;
-      z-index: 2;
-      background: #00f2ff;
-      color: black;
+      background: transparent;
+      border: 2px solid #f72585;
+      color: #f72585;
       padding: 1rem 2rem;
-      border: none;
-      font-size: 1.1rem;
-      border-radius: 10px;
+      font-size: 1rem;
+      border-radius: 50px;
       cursor: pointer;
-      box-shadow: 0 0 15px #00f2ff;
       transition: all 0.3s ease;
     }
     .btn-download:hover {
-      background: #00b7d3;
-      box-shadow: 0 0 20px #00eaff;
+      background: #f72585;
+      color: white;
     }
     section {
       padding: 80px 10% 60px;
     }
-    .features, .changelog, .testimonials, .faq {
-      margin-top: 4rem;
-    }
     h2 {
-      font-size: 2rem;
-      color: #00f2ff;
-      text-shadow: 0 0 5px #00f2ff;
+      font-size: 2.5rem;
+      color: #f72585;
+      border-bottom: 2px solid #f72585;
+      display: inline-block;
+      margin-bottom: 1rem;
     }
     ul {
-      list-style: none;
-      padding-left: 0;
+      list-style: square;
+      padding-left: 1.5rem;
     }
     li {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       font-size: 1.1rem;
     }
-    .testimonials blockquote {
-      background: #111;
-      border-left: 5px solid #00f2ff;
+    blockquote {
+      background: #1a1a2e;
+      border-left: 5px solid #f72585;
       padding: 1rem;
-      margin: 1rem 0;
       border-radius: 10px;
+      margin: 1rem 0;
     }
     footer {
-      background: #000;
+      background: #0f0c29;
       padding: 20px;
       text-align: center;
       font-size: 0.9rem;
-      color: #555;
-    }
-    .fade-in {
-      animation: fadein 2s ease forwards;
-    }
-    @keyframes fadein {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
+      color: #888;
     }
     .audio-control {
       position: fixed;
       bottom: 20px;
-      right: 20px;
+      left: 20px;
       z-index: 999;
     }
     .audio-control input {
       width: 100px;
     }
+    .glow {
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #f72585, 0 0 20px #7209b7; }
+      to { text-shadow: 0 0 20px #f72585, 0 0 40px #7209b7; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1 class="fade-in">Hlaxho Nexus</h1>
-    <p class="fade-in">The most stealthy & powerful Roblox executor</p>
-    <button class="btn-download fade-in" onclick="window.location.href='https://files.catbox.moe/w5x69a.zip'">Descargar</button>
+    <h1 class="glow">Hlaxho Nexus</h1>
+    <p>Ultrastealth Executor for Roblox</p>
+    <button class="btn-download" onclick="window.location.href='https://files.catbox.moe/w5x69a.zip'">Download Now</button>
   </header>
 
-  <section class="features">
-    <h2>⚙️ Características</h2>
+  <section>
+    <h2>Key Features</h2>
     <ul>
-      <li>🛡️ Inyección 99% UNC - 95% SUNC</li>
-      <li>🚀 API dual: Velocity y Xeno</li>
-      <li>🧪 UI con sistema de tabs infinitas</li>
-      <li>🎯 Totalmente indetectable y silencioso</li>
-      <li>🌌 Tema visual futurista animado</li>
-      <li>🔊 Sonidos al hacer clic</li>
-      <li>🎵 Música de fondo con control</li>
+      <li>🧬 99% UNC Injections - 95% SUNC Stability</li>
+      <li>🌀 Dual API support: Velocity & Xeno toggle</li>
+      <li>🖥️ Fully custom Godot UI with infinite tabs</li>
+      <li>🎯 Zero-key, instant injection</li>
+      <li>🎨 Unique design & visual identity</li>
+      <li>🔊 Click effects and ambient sound system</li>
     </ul>
   </section>
 
-  <section class="changelog">
-    <h2>📜 Changelog</h2>
+  <section>
+    <h2>Changelog</h2>
     <ul>
-      <li>[07/20/2025] Versión inicial pública publicada</li>
-      <li>[07/19/2025] Se agregó soporte para Xeno</li>
-      <li>[07/18/2025] Animaciones mejoradas + UI estable</li>
+      <li>[2025-07-20] Initial public release</li>
+      <li>[2025-07-18] Completed stealth layer and API switcher</li>
+      <li>[2025-07-15] UI upgrade and injection optimizations</li>
     </ul>
   </section>
 
-  <section class="testimonials">
-    <h2>💬 Testimonios</h2>
-    <blockquote>“Hlaxho Nexus me da inyecciones limpias sin detección. ¡Una bestia!” – Usuario A</blockquote>
-    <blockquote>“Mucho mejor que ejecutores pagados. Sigan así.” – Usuario B</blockquote>
+  <section>
+    <h2>User Feedback</h2>
+    <blockquote>“Completely different from anything I’ve tried. It’s like the executor *thinks*.” – DevTester01</blockquote>
+    <blockquote>“Velocity + Xeno switch is a game changer. No other UI comes close.” – ShadowScriptKid</blockquote>
   </section>
 
-  <section class="faq">
-    <h2>❓ Preguntas Frecuentes</h2>
+  <section>
+    <h2>FAQ</h2>
     <ul>
-      <li><strong>¿Es seguro?</strong> Sí, está diseñado para ser indetectable y sigiloso.</li>
-      <li><strong>¿Necesito key?</strong> No, es completamente keyless.</li>
-      <li><strong>¿Cuánto pesa?</strong> Menos de 20MB.</li>
+      <li><strong>Is it safe?</strong> Yes, built for maximum stealth.</li>
+      <li><strong>Is it free?</strong> Absolutely. No keys, no ads.</li>
+      <li><strong>Does it auto-update?</strong> Auto update via Bootstrapper (optional).</li>
     </ul>
   </section>
 
   <footer>
-    © 2025 Hlaxho Nexus. Todos los derechos reservados.
+    © 2025 Hlaxho Nexus. Crafted with precision for true stealth.
   </footer>
 
   <div class="audio-control">
     <audio id="bgm" autoplay loop>
       <source src="https://files.catbox.moe/pk2ob3.mp3" type="audio/mpeg" />
     </audio>
-    <input type="range" min="0" max="1" step="0.01" value="0.4" onchange="document.getElementById('bgm').volume = this.value">
+    <input type="range" min="0" max="1" step="0.01" value="0.3" onchange="document.getElementById('bgm').volume = this.value">
   </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const audio = document.getElementById('bgm');
-      audio.volume = 0.4;
+      audio.volume = 0.3;
     });
-
-    // Click sound effect
     const clickSound = new Audio("https://cdn.pixabay.com/audio/2022/03/15/audio_d0ff3c1e12.mp3");
     document.querySelectorAll('button').forEach(btn => {
       btn.addEventListener('click', () => clickSound.play());
